@@ -3,7 +3,9 @@ package com.lmw.web.controller;
 
 import com.lmw.common.result.Result;
 import com.lmw.web.dto.*;
+import com.lmw.web.service.IUserService;
 import io.swagger.v3.oas.annotations.Operation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -19,9 +21,14 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
 
+    @Autowired
+    private IUserService userService;
+
+
     @Operation(summary = "用户注册")
     @PostMapping("/register")
     public Result register(@RequestBody UserRegisterDto userRegisterDTO) {
+        userService.register(userRegisterDTO);
         return Result.ok();
     }
 
@@ -40,7 +47,8 @@ public class UserController {
     @Operation(summary = "获取图形验证码")
     @GetMapping("login/captcha")
     public Result<CaptchaDto> getCaptcha() {
-        return Result.ok();
+        CaptchaDto result = userService.getCaptcha();
+        return Result.ok(result);
     }
 
     @Operation(summary = "更新用户信息")

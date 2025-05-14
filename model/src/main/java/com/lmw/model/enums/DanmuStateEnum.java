@@ -1,7 +1,7 @@
 package com.lmw.model.enums;
 
 // 弹幕状态
-enum DanmuStateEnum implements BaseEnum {
+public enum DanmuStateEnum implements BaseEnum {
     APPROVED(1, "默认过审"),
     UNDER_REVIEW(2, "被举报审核中"),
     DELETED(3, "删除");

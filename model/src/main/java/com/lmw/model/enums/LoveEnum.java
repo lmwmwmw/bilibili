@@ -1,7 +1,7 @@
 package com.lmw.model.enums;
 
 // 点赞状态
-enum LoveEnum implements BaseEnum {
+public enum LoveEnum implements BaseEnum {
     NOT_LIKED(0, "未点赞"),
     LIKED(1, "已点赞");
 

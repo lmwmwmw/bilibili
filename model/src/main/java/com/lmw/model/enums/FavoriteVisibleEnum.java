@@ -1,7 +1,7 @@
 package com.lmw.model.enums;
 
 // 收藏夹可见性
-enum FavoriteVisibleEnum implements BaseEnum {
+public enum FavoriteVisibleEnum implements BaseEnum {
     HIDDEN(0, "隐藏"),
     PUBLIC(1, "公开");
 

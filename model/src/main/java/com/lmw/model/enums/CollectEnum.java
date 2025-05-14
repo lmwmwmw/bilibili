@@ -1,7 +1,7 @@
 package com.lmw.model.enums;
 
 // 收藏状态
-enum CollectEnum implements BaseEnum {
+public enum CollectEnum implements BaseEnum {
     NOT_COLLECTED(0, "未收藏"),
     COLLECTED(1, "已收藏");
 

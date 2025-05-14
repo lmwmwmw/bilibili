@@ -1,5 +1,6 @@
 package com.lmw.web.dto;
 
+import com.lmw.model.enums.BaseEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -25,9 +26,17 @@ public class UserRegisterDto {
     @Schema(description = "昵称")
     @NotBlank(message = "昵称不能为空")
     private String nickname;
+
+    @Schema(description = "性别 0女 1男 2未知")
+    private Integer gender;
     
-    @Schema(description = "验证码")
+    @Schema(description = "验证码key")
     @NotBlank(message = "验证码不能为空")
-    private String captcha;
+    private String captchakey;
+
+
+    @Schema(description = "验证码code")
+    @NotBlank(message = "验证码不能为空")
+    private String captchacode;
 
 }

@@ -1,7 +1,7 @@
 package com.lmw.model.enums;
 
 // 弹幕模式
-enum DanmuModeEnum implements BaseEnum {
+public enum DanmuModeEnum implements BaseEnum {
     SCROLL(1, "滚动"),
     TOP(2, "顶部"),
     BOTTOM(3, "底部");

@@ -1,7 +1,7 @@
 package com.lmw.model.enums;
 
 // 视频状态
-enum VideoStatusEnum implements BaseEnum {
+public enum VideoStatusEnum implements BaseEnum {
     PENDING(0, "审核中"),
     APPROVED(1, "已过审"),
     REJECTED(2, "未通过"),

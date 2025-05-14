@@ -1,7 +1,7 @@
 package com.lmw.model.enums;
 
 // 评论置顶
-enum CommentTopEnum implements BaseEnum {
+public enum CommentTopEnum implements BaseEnum {
     NORMAL(0, "普通"),
     TOP(1, "置顶");
 

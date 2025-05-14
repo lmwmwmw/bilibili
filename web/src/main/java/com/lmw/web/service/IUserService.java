@@ -2,6 +2,8 @@ package com.lmw.web.service;
 
 import com.lmw.model.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.lmw.web.dto.CaptchaDto;
+import com.lmw.web.dto.UserRegisterDto;
 
 /**
  * <p>
@@ -13,4 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IUserService extends IService<User> {
 
+    void register(UserRegisterDto userRegisterDTO);
+
+    CaptchaDto getCaptcha();
 }

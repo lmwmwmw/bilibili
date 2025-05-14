@@ -1,6 +1,6 @@
 package com.lmw.model.enums;
 
-enum GenderEnum implements BaseEnum {
+public enum GenderEnum implements BaseEnum {
     FEMALE(0, "女"),
     MALE(1, "男"),
     UNKNOWN(2, "未知");

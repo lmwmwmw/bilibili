@@ -1,7 +1,7 @@
 package com.lmw.model.enums;
 
 // 视频类型
-enum VideoTypeEnum implements BaseEnum {
+public enum VideoTypeEnum implements BaseEnum {
     ORIGINAL(1, "自制"),
     REPOST(2, "转载");
 

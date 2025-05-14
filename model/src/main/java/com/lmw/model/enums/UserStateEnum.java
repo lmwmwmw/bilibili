@@ -1,7 +1,7 @@
 package com.lmw.model.enums;
 
 // 用户状态
-enum UserStateEnum implements BaseEnum {
+public enum UserStateEnum implements BaseEnum {
     NORMAL(0, "正常"),
     BANNED(1, "封禁"),
     DEACTIVATED(2, "注销");

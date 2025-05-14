@@ -1,7 +1,7 @@
 package com.lmw.model.enums;
 
 // 收藏夹类型
-enum FavoriteTypeEnum implements BaseEnum {
+public enum FavoriteTypeEnum implements BaseEnum {
     DEFAULT(1, "默认收藏夹"),
     CUSTOM(2, "用户创建");
 

@@ -1,6 +1,6 @@
 package com.lmw.model.enums;
 
-enum DeletedEnum implements BaseEnum {
+public enum DeletedEnum implements BaseEnum {
     NOT_DELETED(0, "未删除"),
     DELETED(1, "已删除");
 

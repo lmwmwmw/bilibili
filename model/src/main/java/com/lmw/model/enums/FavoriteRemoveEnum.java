@@ -1,7 +1,7 @@
 package com.lmw.model.enums;
 
 // 收藏移除状态
-enum FavoriteRemoveEnum implements BaseEnum {
+public enum FavoriteRemoveEnum implements BaseEnum {
     NOT_REMOVED(null, "未移除"),
     REMOVED(1, "已移除");
 

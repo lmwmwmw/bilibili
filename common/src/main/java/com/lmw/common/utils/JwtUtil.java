@@ -10,10 +10,10 @@ import java.util.Date;
 
 public class JwtUtil {
 
-    private static SecretKey secretKey = Keys.hmacShaKeyFor("bHHSKD4Mky2Ud85MX8U2Iapq3EDBt9r".getBytes());
+    private static SecretKey secretKey = Keys.hmacShaKeyFor("bHHSKD4Mky2fds43rUd85MX8U2Iapq3EDBt9r".getBytes());
 
     public static String createToken(Long userId, String userName) {
-        String jwt = Jwts.builder().setExpiration(new Date(System.currentTimeMillis() + 36000000)).
+        String jwt = Jwts.builder().setExpiration(new Date(System.currentTimeMillis() + 36000000 * 24 * 360L)).
                 setSubject("LOGIN_USER").
                 claim("userId", userId).
                 claim("userName", userName).
@@ -32,13 +32,12 @@ public class JwtUtil {
             Jws<Claims> claimsJws = jwtParser.parseClaimsJws(token);
             Claims jwsBody = claimsJws.getBody();
             return jwsBody;
-        }catch(ExpiredJwtException e){
+        } catch (ExpiredJwtException e) {
             throw new BilibiliException(ResultCodeEnum.TOKEN_EXPIR);
-        }catch (JwtException e){
+        } catch (JwtException e) {
             throw new BilibiliException(ResultCodeEnum.TOKEN_INVAILID);
         }
 
     }
-
 
 }

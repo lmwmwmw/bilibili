@@ -1,7 +1,7 @@
 package com.lmw.model.enums;
 
 // 视频版权声明
-enum VideoAuthEnum implements BaseEnum {
+public enum VideoAuthEnum implements BaseEnum {
     NO_CLAIM(0, "不声明"),
     NO_REPOST(1, "未经允许禁止转载");
 
