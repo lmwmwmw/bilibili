@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lmw.web.mapper.CommentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.lmw.model.entity.Comment">
+        <id column="id" property="id" />
+        <result column="vid" property="vid" />
+        <result column="uid" property="uid" />
+        <result column="root_id" property="rootId" />
+        <result column="parent_id" property="parentId" />
+        <result column="to_user_id" property="toUserId" />
+        <result column="content" property="content" />
+        <result column="love" property="love" />
+        <result column="bad" property="bad" />
+        <result column="is_top" property="isTop" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+</mapper>

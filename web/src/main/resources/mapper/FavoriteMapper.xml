@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lmw.web.mapper.FavoriteMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.lmw.model.entity.Favorite">
+        <id column="fid" property="fid" />
+        <result column="uid" property="uid" />
+        <result column="type" property="type" />
+        <result column="visible" property="visible" />
+        <result column="cover" property="cover" />
+        <result column="title" property="title" />
+        <result column="description" property="description" />
+        <result column="count" property="count" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+</mapper>
