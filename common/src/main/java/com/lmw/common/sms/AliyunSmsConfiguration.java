@@ -1,4 +1,4 @@
-package com.atguigu.lease.common.sms;
+package com.lmw.common.sms;
 
 import com.aliyun.dysmsapi20170525.Client;
 import com.aliyun.teaopenapi.models.Config;

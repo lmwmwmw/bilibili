@@ -2,7 +2,7 @@ package com.lmw.web.service;
 
 import org.springframework.web.multipart.MultipartFile;
 
-public interface FileUploadService {
+public interface FileService {
     String upload(MultipartFile file);
 
     /**

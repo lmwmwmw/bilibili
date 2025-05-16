@@ -1,5 +1,6 @@
 package com.lmw.model.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -32,6 +33,7 @@ public class User extends BaseEntity {
     private String phone;
 
     @Schema(description = "用户密码")
+    @TableField(select = false)
     private String password;
 
     @Schema(description = "用户昵称")
@@ -51,6 +53,12 @@ public class User extends BaseEntity {
 
     @Schema(description = "状态 0正常 1封禁 2注销")
     private Integer state;
+
+    @Schema(description = "关注数")
+    private Integer followCount;
+
+    @Schema(description = "粉丝数")
+    private Integer followerCount;
 
     @Schema(description = "角色类型 0普通用户 1管理员 2超级管理员")
     private Integer role;

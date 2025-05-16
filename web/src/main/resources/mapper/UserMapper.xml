@@ -13,11 +13,22 @@
         <result column="gender" property="gender" />
         <result column="description" property="description" />
         <result column="state" property="state" />
+        <result column="follow_count" property="followCount" />
+        <result column="follower_count" property="followerCount" />
         <result column="role" property="role" />
         <result column="delete_date" property="deleteDate" />
         <result column="is_deleted" property="isDeleted" />
         <result column="create_date" property="createTime" />
         <result column="update_time" property="updateTime" />
     </resultMap>
+
+    <update id="incrementFollowCount" parameterType="java.lang.Long">
+
+    UPDATE user SET follow_count = follow_count + 1 WHERE uid = #{uid}
+    </update>
+    <update id="incrementFollowerCount" parameterType="java.lang.Integer">
+
+    UPDATE user SET follower_count = follower_count + 1 WHERE uid = #{uid}
+    </update>
 
 </mapper>

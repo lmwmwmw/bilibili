@@ -1,7 +1,7 @@
 package com.lmw.web.controller.file;
 
 import com.lmw.common.result.Result;
-import com.lmw.web.service.FileUploadService;
+import com.lmw.web.service.FileService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +13,10 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/api/file")
 @Tag(name = "文件上传接口")
-public class UpLoadController {
+public class FileController {
 
     @Autowired
-    private FileUploadService fileUploadService;
+    private FileService fileUploadService;
 
     @Operation(summary = "上传文件")
     @PostMapping("/upload")

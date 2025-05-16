@@ -17,7 +17,10 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(authenticationIntercepter).addPathPatterns("/api/**").excludePathPatterns("/api/user/login").excludePathPatterns("api/user/register");
+        registry.addInterceptor(authenticationIntercepter).addPathPatterns("/api/**").excludePathPatterns(
+                "/api/user/auth/phone/login",   // 手机登录
+                "/api/user/auth/password/login",// 密码登录
+                "/api/user/auth/login/sendsmscode" ); // 发送验证码)
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.atguigu.lease.common.utils;
+package com.lmw.common.utils;
 
 import java.util.Random;
 

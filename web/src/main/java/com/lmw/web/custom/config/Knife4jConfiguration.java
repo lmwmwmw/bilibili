@@ -24,5 +24,29 @@ public class Knife4jConfiguration {
                 .group("用户管理").pathsToMatch("/api/user/**")
                 .build();
     }
+    @Bean
+    public GroupedOpenApi userRelationAPI(){
+        return GroupedOpenApi.builder()
+                .group("用户关系管理").pathsToMatch("/api/user/relation/**")
+                .build();
+    }
+    @Bean
+    public GroupedOpenApi fileAPI(){
+        return GroupedOpenApi.builder()
+                .group("文件管理").pathsToMatch("/api/file/**")
+                .build();
+    }
+    @Bean
+    public GroupedOpenApi contentAPI(){
+        return GroupedOpenApi.builder()
+                .group("内容管理").pathsToMatch("/api/content/**")
+                .build();
+    }
+    @Bean
+    public GroupedOpenApi videoAPI(){
+        return GroupedOpenApi.builder()
+                .group("视频管理").pathsToMatch("/api/video/**")
+                .build();
+    }
 
 }

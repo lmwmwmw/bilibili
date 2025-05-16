@@ -1,4 +1,4 @@
-package com.lmw.web.controller;
+package com.lmw.web.controller.user;
 
 import com.lmw.common.result.Result;
 import com.lmw.web.dto.PasswordUpdateDTO;

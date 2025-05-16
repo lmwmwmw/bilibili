@@ -1,7 +1,7 @@
 package com.lmw.web.service.impl;
 
 import com.lmw.common.minio.MinioProperties;
-import com.lmw.web.service.FileUploadService;
+import com.lmw.web.service.FileService;
 import io.minio.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import java.util.UUID;
 
 @Slf4j
 @Service
-public class FileUploadServiceImpl implements FileUploadService {
+public class FileServiceImpl implements FileService {
 
 
     @Autowired

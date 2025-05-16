@@ -1,4 +1,6 @@
 package com.lmw.web.service;
 
-public @interface ISmsService {
+public interface ISmsService {
+
+    void sendcode(String phone, String code);
 }

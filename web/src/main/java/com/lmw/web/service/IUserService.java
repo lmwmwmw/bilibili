@@ -2,8 +2,8 @@ package com.lmw.web.service;
 
 import com.lmw.model.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.lmw.web.dto.CaptchaDto;
-import com.lmw.web.dto.UserRegisterDto;
+import com.lmw.web.dto.*;
+import com.lmw.web.vo.UserProfileVO;
 
 /**
  * <p>
@@ -15,7 +15,23 @@ import com.lmw.web.dto.UserRegisterDto;
  */
 public interface IUserService extends IService<User> {
 
-    void register(UserRegisterDto userRegisterDTO);
 
-    CaptchaDto getCaptcha();
+    void sendSmsCode(SmsCodeDTO smsCodeDto);
+
+    String phoneLogin(PhoneLoginDTO phoneLoginDto);
+
+    String passwordLogin(UserPasswordLoginDTO userPasswordLoginDTO);
+
+    void setPassword(PasswordUpdateDTO passwordUpdateDTO);
+
+    void logout();
+
+    UserProfileVO getUserInfo();
+
+    void updateUserInfo(UserUpdateDTO userUpdateDTO);
+
+
+    void updateUserAvatar(String avatar);
+
+    void updateUserBackground(String background);
 }

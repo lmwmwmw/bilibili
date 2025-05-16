@@ -13,7 +13,9 @@ public class JwtUtil {
     private static SecretKey secretKey = Keys.hmacShaKeyFor("bHHSKD4Mky2fds43rUd85MX8U2Iapq3EDBt9r".getBytes());
 
     public static String createToken(Long userId, String userName) {
-        String jwt = Jwts.builder().setExpiration(new Date(System.currentTimeMillis() + 36000000 * 24 * 360L)).
+
+        //token过期时间默认24小时
+        String jwt = Jwts.builder().setExpiration(new Date(System.currentTimeMillis() + 3600000 * 24L)).
                 setSubject("LOGIN_USER").
                 claim("userId", userId).
                 claim("userName", userName).
@@ -39,5 +41,8 @@ public class JwtUtil {
         }
 
     }
+
+
+
 
 }
