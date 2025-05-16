@@ -1,20 +1,13 @@
 package com.lmw.web.controller;
 
-
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * <p>
- * 用户视频关联表 前端控制器
- * </p>
- *
- * @author lmw
- * @since 2025-05-14
- */
 @RestController
-@RequestMapping("/user-video")
-public class UserVideoController {
+@RequestMapping("/api/user/content")
+@Tag(name = "用户内容管理接口")
+public class UserContentController {
+
 
 }

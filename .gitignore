@@ -31,3 +31,13 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### 忽略日志  ###
+logs/
+*.log
+
+
+# 特定的配置文件
+/web/src/main/resources/application-dev.yml
+/web/src/main/resources/application-prod.yml
+/web/src/main/resources/application.yml
